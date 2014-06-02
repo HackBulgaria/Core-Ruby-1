@@ -1,0 +1,90 @@
+from os import path
+from pygame import mixer
+
+class MusicPlayer:
+    main_mixer = mixer
+    def __init__(self):
+        MusicPlayer.main_mixer.init()
+
+    def _import_file(self, file_path):
+        if(path.isfile(file_path) and file_path[-4:] == ".mp3"):
+            MusicPlayer.main_mixer.music.load(file_path)
+            print("An mp3 file is added.")
+            return True
+        else:
+            print("This is not an mp3 file!")
+            return False
+
+    def _play(self):
+        try:
+            MusicPlayer.main_mixer.music.stop()
+        except:
+            pass
+        try:
+            MusicPlayer.main_mixer.music.play()
+            if MusicPlayer.main_mixer.music.get_busy() == 1:
+                return True
+        except:
+            print("wrong playing")
+            return False
+
+    def _pause(self):
+        try:
+            MusicPlayer.main_mixer.music.pause()
+            if MusicPlayer.main_mixer.music.get_busy() == 1:
+                return True
+        except:
+            print("wrong unpausing")
+            return False
+
+    def _stop(self):
+        try:
+            MusicPlayer.main_mixer.music.stop()
+        except:
+            print("wrong stopping")
+
+    def _unpause(self):
+        try:
+            MusicPlayer.main_mixer.music.unpause()
+        except:
+            print("wrong unpausing")
+
+    def _play_position(self, position):
+        try:
+            MusicPlayer.main_mixer.music.set_pos(position)
+        except:
+            print("wrong positioning")
+
+    def _set_volume(self, value):
+        try:
+            MusicPlayer.main_mixer.music.set_volume(value)
+        except:
+            print("wrong volume setting")
+
+    def _get_volume(self):
+        return MusicPlayer.main_mixer.get_volume()
+
+    def _get_cond(self):
+        return MusicPlayer.main_mixer.get_busy()
+
+    def _rewind(self):
+        try:
+            MusicPlayer.main_mixer.music.rewind()
+        except:
+            print("wrong rewinding")
+
+    def _fadeout(self, time):
+        try:
+            MusicPlayer.main_mixer.music.fadeout(time * 1000)
+        except:
+            print("wrong fadeout")
+
+    def _queue(self, file_path):
+        if(path.isfile(file_path) and file_path[-4:] == ".mp3"):
+            try:
+                MusicPlayer.main_mixer.music.queue(file_path)
+            except:
+                print("Can't add the file to queue")
+        else:
+            print("Can't add the file to queue")
+

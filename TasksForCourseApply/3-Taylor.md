@@ -6,16 +6,18 @@ _Y U GIVE US SOME MUCH MATH_ series with the, ahem, [Taylor series].
 In mathematics, a [Taylor series] is a representation of a function as an
 infinite sum of terms that are calculated from the values of the function's
 derivatives at a single point. It is common practice to approximate a function
-by using a finite number of terms of its Taylor series.
+by using a finite number of terms of its [Taylor series].
 
-The [Taylor series] are interesting, because you can use them to approximate
-your common trigonometric functions. We want you to calculate Sine and Cosine
-using their respective [Taylor series]. You can find them [here].
+In particular, you can easily calculate common trigonometric functions. And
+that's want we want you to do.
 
-The interface for the Sine function should be `sine(x, precision)`, where
+Calculate [Sine] and [Cosine] using their respective [Taylor series].  You can
+find them [here].
+
+The interface for the [Sine] function should be `sine(x, precision)`, where
 precision is the upper limit of `n`.
 
-The interface for the Cosine function should be `cosine(x, precision)`, where
+The interface for the [Cosine] function should be `cosine(x, precision)`, where
 precision is the upper limit of `n`.
 
 The higher the `precision` is, the better the approximation.

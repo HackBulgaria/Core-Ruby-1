@@ -9,18 +9,12 @@ derivatives at a single point. It is common practice to approximate a function
 by using a finite number of terms of its [Taylor series].
 
 In particular, you can easily calculate common trigonometric functions. And
-that's want we want you to do.
+that's want we want you to do. Calculate [Sine] and [Cosine] using their
+respective [Taylor series]. You can find them [here].
 
-Calculate [Sine] and [Cosine] using their respective [Taylor series].  You can
-find them [here].
-
-The interface for the [Sine] function should be `sine(x, precision)`, where
-precision is the upper limit of `n`.
-
-The interface for the [Cosine] function should be `cosine(x, precision)`, where
-precision is the upper limit of `n`.
-
-The higher the `precision` is, the better the approximation.
+The interface for the [Sine] and [Cosine] functions should be `sine(x,
+precision)` and `cosine(x, precision)`, where precision is the upper limit of
+`n`. The higher the `precision` is, the better the approximation.
 
 [Taylor series]: http://en.wikipedia.org/wiki/Taylor_series
 [Sine]: http://en.wikipedia.org/wiki/Sine

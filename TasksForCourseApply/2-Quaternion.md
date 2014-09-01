@@ -5,7 +5,7 @@ applied mathematics, in particular for calculations involving three-dimensional
 rotations such as in three-dimensional computer graphics and computer vision.
 
 Choose an OOP language of your liking and design a [Quaternion] class
-implementing all of the properties by its [definition].
+implementing all of the properties by its [definition]
 
 _Hint: you can name the component 1 as `e`._
 
@@ -16,4 +16,4 @@ supports it? Should you have any static properties? Why?
 Please, answer all those question in a comment above the class definition.
 
 [Quaternion]: http://en.wikipedia.org/wiki/Quaternion
-[definition]: http://en.wikipedia.org/wiki/Quaternion#Definition
+[definition]: http://mathworld.wolfram.com/Quaternion.html

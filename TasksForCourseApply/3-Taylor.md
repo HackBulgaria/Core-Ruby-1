@@ -20,7 +20,7 @@ precision is the upper limit of `n`.
 
 The higher the `precision` is, the better the approximation.
 
-[Tylor series]: http://en.wikipedia.org/wiki/Taylor_series
+[Taylor series]: http://en.wikipedia.org/wiki/Taylor_series
 [Sine]: http://en.wikipedia.org/wiki/Sine
 [Cosine]: http://en.wikipedia.org/wiki/Cosine
 [here]: http://en.wikipedia.org/wiki/Trigonometric_functions#Series_definitions

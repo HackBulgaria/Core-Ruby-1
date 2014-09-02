@@ -13,7 +13,7 @@ that's want we want you to do. Calculate [Sine] and [Cosine] using their
 respective [Taylor series]. You can find them [here].
 
 The interface for the [Sine] and [Cosine] functions should be `sine(x,
-precision)` and `cosine(x, precision)`, where precision is the upper limit of
+precision)` and `cosine(x, precision)`, where `precision` is the upper limit of
 `n`. The higher the `precision` is, the better the approximation.
 
 [Taylor series]: http://en.wikipedia.org/wiki/Taylor_series

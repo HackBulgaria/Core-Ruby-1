@@ -1,4 +1,4 @@
-# Quaternion
+# Quaternion (optional)
 
 [Quaternions][Quaternion] are cool! They find uses in both theoretical and
 applied mathematics, in particular for calculations involving three-dimensional
@@ -17,3 +17,7 @@ Please, answer all those question in a comment above the class definition.
 
 [Quaternion]: http://en.wikipedia.org/wiki/Quaternion
 [definition]: http://mathworld.wolfram.com/Quaternion.html
+
+## Optional task
+
+You can apply without solving this problem. But if you manage to solve it, this will help you in the interview process :)

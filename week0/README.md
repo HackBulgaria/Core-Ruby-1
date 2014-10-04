@@ -6,7 +6,7 @@ Welcome to the first ever Core Ruby class in [Hack Bulgaria][]! We're going to g
 
 A great book to get you started. You can [read][PickAxe] it online for free!
 
-## Why Poignant's Guide to Ruby
+## Why's Poignant Guide to Ruby
 
 [![image](http://mislav.uniqpath.com/poignant-guide/images/2007-cover-open.jpg)](http://mislav.uniqpath.com/poignant-guide/images/2007-cover-open.jpg)
 

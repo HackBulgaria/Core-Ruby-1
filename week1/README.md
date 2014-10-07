@@ -79,3 +79,21 @@ end
 ```
 
 See http://en.wikipedia.org/wiki/Ordinal_number_(linguistics)
+
+### Palindrome
+
+A palindrome is a word, phrase, number, or other sequence of symbols or
+elements that reads the same forward or reversed, with general allowances for
+adjustments to punctuation and word dividers.
+
+```ruby
+def palindrome?(object)
+  # Your code goes here.
+end
+
+>> palindome 12321
+=> true
+
+>> ordinal 'Race car'
+=> true
+```

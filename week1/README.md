@@ -97,3 +97,21 @@ end
 >> ordinal 'Race car'
 => true
 ```
+
+### Anagram
+
+An anagram is a type of word play, the result of rearranging the letters of a
+word or phrase to produce a new word or phrase, using all the original letters
+exactly once; for example Torchwood can be rearranged into Doctor Who.
+
+```ruby
+def anagram?(word, other)
+  # Your code goes here.
+end
+
+>> anagram? 'silent', 'listen'
+=> true
+
+>> anagram? 'Mr Mojo Risin', 'Jim Morisson'
+=> 112th
+```

@@ -36,6 +36,23 @@ def histogram(string)
   # Your code goes here.
 end
 
->> histogram("abraca")
+>> histogram "abraca"
 => {"a"=>3, "b"=>1, "r"=>1, "c"=>1}
+```
+
+### Prime
+
+A prime number is any integer greater than 1 that is divisible only by 1 and
+itself.
+
+Bunus points for an outline of proof of why 1 isn't a prime number. Tip: ask
+@RadoRado.
+
+```ruby
+def prime?(n)
+  # Your code goes here.
+end
+
+>> prime? 7
+=> true
 ```

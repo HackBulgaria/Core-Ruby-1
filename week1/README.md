@@ -145,3 +145,16 @@ end
 >> remove_prefix 'Ladies Night Out', ' Night Out'
 => "Ladies"
 ```
+
+### Digits
+
+Given the integer `n`, transform it to an array of its digits.
+
+```ruby
+def digits(n)
+  # Your code goes here.
+end
+
+>> digits 12345
+=> [1, 2, 3, 4, 5]
+```

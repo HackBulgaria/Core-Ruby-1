@@ -26,6 +26,22 @@ We'll help you with that on the spot, if you don't get it now, don't worry.
 
 ## Problems
 
+To run the tests for the problems install bundler with `gem install bundler`.
+
+```bash
+# This will install all the dependencies for the current set of problems.
+bundle install
+
+# To run just the tests.
+bundle exec rake test
+
+# To run just the rubocop style validations.
+bundle exec rake rubocop
+
+# Runs both the tests and the default style checks.
+bundle exec rake
+```
+
 ### Histogram
 
 Create a histogram with each character and the number of its occurrences in

@@ -10,6 +10,20 @@ you may find useful, while digging into them:
 If you don't feel confident with the building blocks yet, a couple of lessons
 on http://tryruby.org/ can help you digest the above documentation better.
 
+## Solutions
+
+The file to write your solutions in is called `solutions.rb`. For the following
+problems, you need to define several methods.
+
+A boilerplate of a test file is provided in `solution_test.rb`. You can write
+your tests there and work your way in a TDD fusion.
+
+The workflow is write a test. See it fail. Write a solution that makes it pass.
+Then repeat for as many corner cases you can think of and move to the next
+problem.
+
+We'll help you with that on the spot, if you don't get it now, don't worry.
+
 ## Problems
 
 ### Histogram

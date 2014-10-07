@@ -115,3 +115,18 @@ end
 >> anagram? 'Mr Mojo Risin', 'Jim Morisson'
 => 112th
 ```
+
+### Remove Prefix
+
+Given the string `Ladies Night Out` and the prefix `Ladies `, this operation
+should produce the string `Night Out`.
+
+
+```ruby
+def remove_prefix(string, pattern)
+  # Your code goes here.
+end
+
+>> remove_prefix 'Ladies Night Out', 'Ladies'
+=> "Night Out"
+```

@@ -1,4 +1,4 @@
-# Week 1
+# Standard Types
 
 Welcome to the first set of problems for week 1. Here are a couple of resources
 you may find useful, while digging into them:

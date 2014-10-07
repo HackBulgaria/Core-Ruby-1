@@ -43,10 +43,8 @@ end
 ### Prime
 
 A prime number is any integer greater than 1 that is divisible only by 1 and
-itself.
-
-Bunus points for an outline of proof of why 1 isn't a prime number. Tip: ask
-@RadoRado.
+itself. Bonus points for an outline of proof of why 1 isn't a prime number.
+Tip: ask @RadoRado.
 
 ```ruby
 def prime?(n)
@@ -56,3 +54,28 @@ end
 >> prime? 7
 => true
 ```
+
+### Ordinal
+
+In linguistics, ordinal numbers are words representing position or rank in a
+sequential order. The order may be of size, importance, chronology, and so on.
+In English, they are adjectives such as 'third' and 'tertiary'.
+
+Ordinal numbers may be written in English with numerals and letter suffixes:
+1st, 2nd or 2d, 3rd or 3d, 4th, 11th, 21st, 101st, 477th, etc. In some
+countries, written dates omit the suffix, although it is nevertheless
+pronounced.
+
+```ruby
+def ordinal(n)
+  # Your code goes here.
+end
+
+>> ordinal 2
+=> 2nd
+
+>> ordinal 112
+=> 112th
+```
+
+See http://en.wikipedia.org/wiki/Ordinal_number_(linguistics)

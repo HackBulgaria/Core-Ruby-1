@@ -183,3 +183,8 @@ end
 >> fizzbuzz 1..7
 => [1, 2, :fizz, 4, :buzz, 6, 7]
 ```
+
+## Easy
+
+Solved the problems already? Try to rewrite them in the minimal amounts of
+code, without sacrificing readability.

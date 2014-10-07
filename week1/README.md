@@ -130,3 +130,18 @@ end
 >> remove_prefix 'Ladies Night Out', 'Ladies'
 => "Night Out"
 ```
+
+### Remove Suffix
+
+Given the string `Ladies Night Out` and the suffix ` Night Out`, this operation
+should produce the string `Ladies`.
+
+
+```ruby
+def remove_prefix(string, prefix)
+  # Your code goes here.
+end
+
+>> remove_prefix 'Ladies Night Out', ' Night Out'
+=> "Ladies"
+```

@@ -1,6 +1,6 @@
 # Standard Types
 
-Welcome to the first set of problems for week 1. Here are a couple of resources
+Welcome to the first set of problems for week 0. Here are a couple of resources
 you may find useful, while digging into them:
 
 * http://www.ruby-doc.org/core-2.1.3/Array.html
@@ -107,10 +107,10 @@ def palindrome?(object)
   # Your code goes here.
 end
 
->> palindome 12321
+>> palindome? 12321
 => true
 
->> ordinal 'Race car'
+>> palindome? 'Race car'
 => true
 ```
 
@@ -129,7 +129,7 @@ end
 => true
 
 >> anagram? 'Mr Mojo Risin', 'Jim Morisson'
-=> 112th
+=> false
 ```
 
 ### Remove Prefix
@@ -139,7 +139,7 @@ should produce the string `Night Out`.
 
 
 ```ruby
-def remove_prefix(string, pattern)
+def remove_prefix(string, prefix)
   # Your code goes here.
 end
 
@@ -154,11 +154,11 @@ should produce the string `Ladies`.
 
 
 ```ruby
-def remove_prefix(string, prefix)
+def remove_suffix(string, suffix)
   # Your code goes here.
 end
 
->> remove_prefix 'Ladies Night Out', ' Night Out'
+>> remove_suffix 'Ladies Night Out', ' Night Out'
 => "Ladies"
 ```
 
@@ -197,7 +197,7 @@ def fizzbuzz(range)
 end
 
 >> fizzbuzz 1..7
-=> [1, 2, :fizz, 4, :buzz, 6, 7]
+=> [1, 2, :fizz, 4, :buzz, :fizz, 7]
 ```
 
 ## Easy

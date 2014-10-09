@@ -218,7 +218,7 @@ end
 => {"this"=>1, "is"=>1, "an"=>1, "of"=>1, "words"=>3}
 ```
 
-### Count
+### Count Words
 
 Create a function which counts the words in a variadic list of sentences. There
 should be no difference between `Word` and `word`.
@@ -228,7 +228,7 @@ def count_words(*sentences)
   # Your code goes here.
 end
 
->> count_words "This is a sentance, bro. Bro, this is it."
+>> count_words "This is a sentance, bro.", "Bro, this is it."
 => {"this"=>2, "is"=>2, "a"=>1, "bro"=>2, "it"=>1}
 
 Bonus, catch words with apostrophes like `won't`.

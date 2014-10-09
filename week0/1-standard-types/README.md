@@ -200,6 +200,40 @@ end
 => [1, 2, :fizz, 4, :buzz, :fizz, 7]
 ```
 
+## Extra Problems
+
+### Count
+
+Given any array, return a hash with the count of every object.
+
+```ruby
+def count(array)
+  # Your code goes here.
+end
+
+>> count [1, 2, 3, 1]
+=> {1=>2, 2=>1, 3=>1}
+
+>> count %w(this is an array of words words words)
+=> {"this"=>1, "is"=>1, "an"=>1, "of"=>1, "words"=>3}
+```
+
+### Count
+
+Create a function which counts the words in a variadic list of sentences. There
+should be no difference between `Word` and `word`.
+
+```ruby
+def count_words(*sentences)
+  # Your code goes here.
+end
+
+>> count_words "This is a sentance, bro. Bro, this is it."
+=> {"this"=>2, "is"=>2, "a"=>1, "bro"=>2, "it"=>1}
+
+Bonus, catch words with apostrophes like `won't`.
+```
+
 ## Easy
 
 Solved the problems already? Try to rewrite them in the minimal amounts of

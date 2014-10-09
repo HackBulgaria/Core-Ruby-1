@@ -2,10 +2,10 @@ def fizzbuzz(range)
   array = []
   range.each do | element |
     case
-    when element % 3 == 0 && element % 5 == 0 then array.push(:fizz_buzz)
-    when element % 3 == 0 then array.push(:fizz)
-    when element % 5 == 0 then array.push(:buzz)
-    else array.push(element)
+    when element % 3 == 0 && element % 5 == 0 then array << :fizz_buzz
+    when element % 3 == 0 then array << :fizz
+    when element % 5 == 0 then array << :buzz
+    else array << element
     end
   end
   array
@@ -13,7 +13,7 @@ end
 
 def digits(n)
   array = []
-  n.to_s.each_char { |ch| array.push(ch.to_i) }
+  n.to_s.each_char { |ch| array << ch.to_i }
   array
 end
 
@@ -26,22 +26,13 @@ def remove_prefix(string, prefix)
 end
 
 def anagram?(word, other)
-  w = histogram(word)
-  o = histogram(other)
-  w == o
+  return false unless word.length == other.length
+  histogram(word) == histogram(other)
 end
 
 def palindrome?(object)
-  str = String.try_convert(object)
-  return false if str.nil?
-  cleared_str = str.gsub(/[\s]/, '').downcase
-  return false if cleared_str.length.even?
-  i = 0
-  while i < cleared_str.length / 2
-    return false if cleared_str[i] != cleared_str[cleared_str.length - 1 - i]
-    i += 1
-  end
-  true
+  s = object.to_s.downcase.gsub(/[\s]/, '')
+  s == s.reverse
 end
 
 def ordinal(n)
@@ -67,11 +58,44 @@ end
 def histogram(string)
   numbers = {}
   string.each_char do | letter |
-    if numbers.key?(letter)
-      numbers[letter] += 1
-    else
-      numbers[letter] = 1
-    end
+    numbers.key?(letter) ? numbers[letter] += 1 : numbers[letter] = 1
   end
   numbers
+end
+
+def count(array)
+  objs = {}
+  array.each do | e |
+    objs.key?(e)  ? objs[e] += 1 : objs[e] = 1
+  end
+  objs
+end
+
+def count_words(*sentences)
+  words = {}
+  sentences.each do | sentence |     
+    many_words = sentence.split(/\W+/)
+    many_words.each do | e |
+      words.key?(e)  ? words[e] += 1 : words[e] = 1
+    end
+  end
+  words
+end
+
+class Array
+  
+  def to_hash
+    hash = {}
+    self.each do | e |
+      raise 'Each array element must be an array with 2 elements' unless \
+        e.instance_of? Array || e.count == 2 
+        hash[e[0]] = e[1]
+    end
+    hash
+  end
+   
+   def index_by
+   
+   end
+   
 end

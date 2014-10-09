@@ -228,8 +228,8 @@ def count_words(*sentences)
   # Your code goes here.
 end
 
->> count_words "This is a sentance, bro.", "Bro, this is it."
-=> {"this"=>2, "is"=>2, "a"=>1, "bro"=>2, "it"=>1}
+>> count_words "This is a sentence, bro.", "Bro, this is it."
+=> {"this"=>2, "is"=>2, "a"=>1, "bro"=>2, "it"=>1, "sentence"=>1}
 
 Bonus, catch words with apostrophes like `won't`.
 ```

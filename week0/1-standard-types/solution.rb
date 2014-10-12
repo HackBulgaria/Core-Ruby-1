@@ -93,9 +93,5 @@ class Array
     end
     hash
   end
-   
-   def index_by
-   
-   end
-   
+
 end

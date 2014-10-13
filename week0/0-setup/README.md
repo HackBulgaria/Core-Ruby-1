@@ -11,7 +11,12 @@ forget to add the `C:\Ruby-213\bin` to the beginning of `%PATH%`.
 
 ## Linux & OSX
 
-Follow the instructions on [rbenv installation page][].
+Follow the instructions on [rbenv installation page][]. After rbenv is
+installed, run the following in a fresh terminal session.
+
+```bash
+rbenv install 2.1.3 && rbenv global 2.1.3
+```
 
 [Ruby Intaller]: http://rubyinstaller.org/
 [Windows Path]: http://www.computerhope.com/issues/ch000549.htm

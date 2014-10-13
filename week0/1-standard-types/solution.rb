@@ -18,11 +18,11 @@ def digits(n)
 end
 
 def remove_suffix(string, suffix)
-  string.gsub(suffix, '').rstrip
+  string.gsub(suffix, '')
 end
 
 def remove_prefix(string, prefix)
-  string.gsub(prefix, '').lstrip
+  string.gsub(prefix, '')
 end
 
 def anagram?(word, other)

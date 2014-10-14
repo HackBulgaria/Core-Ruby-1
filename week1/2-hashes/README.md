@@ -73,5 +73,10 @@ end
 => {:a=>2, :b=>2, :c=>3}
 ```
 
+## Bang Bang
+
+Add bang version methods (e.g. Hash#pick!) that change the hash inplace. Think
+whether you can reuse the implementations with the non-bang version methods.
+
 [@skanev]: http://github.com/skanev
 [@mitio]: http://github.com/mitio

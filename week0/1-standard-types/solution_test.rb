@@ -3,10 +3,6 @@ require 'minitest/autorun'
 require_relative 'solution'
 
 class SolutionTest < Minitest::Unit::TestCase
-  def test_the_truth
-    assert_equal true, true
-  end
-
   def test_histogram
     assert_equal histogram("abraca"), {"a"=>3, "b"=>1, "r"=>1, "c"=>1}
     assert_equal histogram("!@#\$"), {"!" => 1, "@" => 1, "#" => 1, "$" => 1}
@@ -25,6 +21,7 @@ class SolutionTest < Minitest::Unit::TestCase
     assert_equal prime?(1299721), true
     assert_equal prime?(32416190071), true
   end
+  
   def test_ordinal
     assert_equal "1st", ordinal(1)
     assert_equal "2nd", ordinal(2)
@@ -90,7 +87,5 @@ class SolutionTest < Minitest::Unit::TestCase
     assert_equal fizzbuzz(15..15), [:fizzbuzz]
     assert_equal fizzbuzz(1..7), [1, 2, :fizz, 4, :buzz, :fizz, 7]
     assert_equal fizzbuzz(8..36), [8, :fizz, :buzz, 11, :fizz, 13, 14, :fizzbuzz, 16, 17, :fizz, 19, :buzz, :fizz, 22, 23, :fizz, :buzz, 26, :fizz, 28, 29, :fizzbuzz, 31, 32, :fizz, 34, :buzz, :fizz]
-
   end
-
 end

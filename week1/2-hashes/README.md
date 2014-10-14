@@ -64,13 +64,13 @@ present in the hash.
 
 ```ruby
 class Hash
-  def default(hash)
+  def defaults(hash)
     # Your code goes here.
   end
 end
 
 >> {a: 1, b: 2}.default(a: 4, c: 3)
-=> {:a=>2, :b=>2, :c=>3}
+=> {:a=>1, :b=>2, :c=>3}
 ```
 
 ## Bang Bang

@@ -69,7 +69,7 @@ class Hash
   end
 end
 
->> {a: 1, b: 2}.default(a: 4, c: 3)
+>> {a: 1, b: 2}.defaults(a: 4, c: 3)
 => {:a=>1, :b=>2, :c=>3}
 ```
 

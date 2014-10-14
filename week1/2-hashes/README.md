@@ -13,7 +13,7 @@ Enumerable is a gem. Go through its documentation. Hash builds on top of it.
 
 ### Hash#pick
 
-Hash#pick returns a new hash, with only the specified keys in it.
+`Hash#pick` returns a new hash, with only the specified keys in it.
 
 ```ruby
 class Hash
@@ -23,12 +23,13 @@ class Hash
 end
 
 >> {a: 1, b: 2, c: 3}.pick(:a, :b)
-=> {:a=>2, :b=>3}
+=> {:a=>1, :b=>2}
 ```
 
 ### Hash#except
 
-Hash#except returns a new hash, without the specified keys in it.
+`Hash#except` returns a new hash, without the specified keys in it. Kind of like
+a reversed `Hash#pluck`.
 
 ```ruby
 class Hash
@@ -38,12 +39,12 @@ class Hash
 end
 
 >> {a: 1, b: 2, d: nil}.except(:d)
-=> {:a=>2, :b=>3}
+=> {:a=>1, :b=>2}
 ```
 
 ### Hash#compact_values
 
-Hash#compact_values returns a new hash, with only the truthy keys in it.
+`Hash#compact_values` returns a new hash, with only the truthy keys in it.
 
 ```ruby
 class Hash
@@ -53,7 +54,23 @@ class Hash
 end
 
 >> {a: 1, b: 2, d: nil}.compact_values
-=> {:a=>2, :b=>3}
+=> {:a=>1, :b=>2}
+```
+
+### Hash#default
+
+`Hash#default` returns a new hash, setting values only if they were not already
+present in the hash.
+
+```ruby
+class Hash
+  def default(hash)
+    # Your code goes here.
+  end
+end
+
+>> {a: 1, b: 2}.default(a: 4, c: 3)
+=> {:a=>2, :b=>2, :c=>3}
 ```
 
 [@skanev]: http://github.com/skanev

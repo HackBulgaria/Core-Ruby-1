@@ -81,17 +81,3 @@ def count_words(*sentences)
   end
   words
 end
-
-class Array
-  
-  def to_hash
-    hash = {}
-    self.each do | e |
-      raise 'Each array element must be an array with 2 elements' unless \
-        e.instance_of? Array || e.count == 2 
-        hash[e[0]] = e[1]
-    end
-    hash
-  end
-
-end

@@ -37,15 +37,15 @@ class SolutionTest < Minitest::Unit::TestCase
   end
 
   def test_remove_prefix
-    assert_equal 'silently', remove_prefix('listen silently', 'listen')
-    assert_equal 'closely', remove_prefix('listen closely', 'listen')
+    assert_equal ' silently', remove_prefix('listen silently', 'listen')
+    assert_equal ' closely', remove_prefix('listen closely', 'listen')
   end
 
   def test_remove_suffix
     assert_equal \
-      'listen very very', remove_suffix('listen very very silently', 'silently')
+      'listen very very ', remove_suffix('listen very very silently', 'silently')
     assert_equal \
-      'listen extremely', remove_suffix('listen extremely closely', 'closely')
+      'listen extremely ', remove_suffix('listen extremely closely', 'closely')
   end
 
   def test_digits
@@ -69,11 +69,4 @@ class SolutionTest < Minitest::Unit::TestCase
     "bla"=>3, "drun"=>1, "da"=>1, "uga"=>1, "buga"=>1, "dwa"=>1, "dwadaw"=>1
   end
   
-  def test_array_to_hash
-    assert_equal [[2, 5], [1, 2], [1, 3]].to_hash, 2=>5, 1=>3
-    assert_equal [[2, 5], [2, 2], [1, 3]].to_hash, 2=>2, 1=>3
-    # assert_raises 'Each array element must be an array with 2 elements' do 
-    #  [1, 2].to_hash
-    # end
-  end
 end

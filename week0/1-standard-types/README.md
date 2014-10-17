@@ -215,7 +215,7 @@ end
 => {1=>2, 2=>1, 3=>1}
 
 >> count %w(this is an array of words words words)
-=> {"this"=>1, "is"=>1, "an"=>1, "of"=>1, "words"=>3}
+=> {"this"=>1, "is"=>1, "an"=>1, "array"=>1, "of"=>1, "words"=>3}
 ```
 
 ### Count Words

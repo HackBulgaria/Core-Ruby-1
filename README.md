@@ -1,6 +1,6 @@
 # Core-Ruby-1
 
-The repitory for the [Hack Bulgaria][] [Core Ruby][] class. October 2014. Visit the class [website][Core Ruby] at {http://coreruby.github.io][Core Ruby].
+The repitory for the [Hack Bulgaria][] [Core Ruby][] class. October 2014. Visit the class [website][Core Ruby] at [http://coreruby.github.io][Core Ruby].
 
 ## Program
 

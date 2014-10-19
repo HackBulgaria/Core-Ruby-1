@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 
-require_relative 'solution.rb'
+require_relative 'solution'
 
 class SolutionTest < Minitest::Test
   class Collection

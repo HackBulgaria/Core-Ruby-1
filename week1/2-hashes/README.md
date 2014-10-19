@@ -53,24 +53,24 @@ class Hash
   end
 end
 
->> {a: 1, b: 2, d: nil}.compact_values
+>> {a: 1, b: 2, c: false, d: nil}.compact_values
 => {:a=>1, :b=>2}
 ```
 
-### Hash#default
+### Hash#defaults
 
-`Hash#default` returns a new hash, setting values only if they were not already
+`Hash#defaults` returns a new hash, setting values only if they were not already
 present in the hash.
 
 ```ruby
 class Hash
-  def default(hash)
+  def defaults(hash)
     # Your code goes here.
   end
 end
 
->> {a: 1, b: 2}.default(a: 4, c: 3)
-=> {:a=>2, :b=>2, :c=>3}
+>> {a: 1, b: 2}.defaults(a: 4, c: 3)
+=> {:a=>1, :b=>2, :c=>3}
 ```
 
 ## Bang Bang

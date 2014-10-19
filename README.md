@@ -1,6 +1,6 @@
 # Core-Ruby-1
 
-The repitory for the Core Ruby course, happening in http://hackbulgaria - October 2014
+The repository for the [Hack Bulgaria][] [Core Ruby][] class. October 2014. Visit the class [website][Core Ruby] at [http://coreruby.github.io][Core Ruby].
 
 ## Program
 
@@ -17,3 +17,6 @@ Week | Material
  6   | Freedom patching. Refinements. Keyword arguments. All the rage in 2.1.
  7   | Threading or: How I Learned to Stop Worrying and Learned to Love the GIL. JRuby and Rubinius. Threading locals. Fibers. Basic networking.
  8   | RubyGems: The structure of a gem. Gem specifications. Rake. Bundler.
+
+[Hack Bulgaria]: http://hackbulgaria.com
+[Core Ruby]: http://coreruby.github.io

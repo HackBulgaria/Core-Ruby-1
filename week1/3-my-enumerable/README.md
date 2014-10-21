@@ -64,6 +64,10 @@ module MyEnumerable
 end
 ```
 
+## Enumerator
+
+Return an iterator for the method, if no block is given.
+
 ## Aliases
 
 As a bonus, create aliases for the following methods, so they can be invoked

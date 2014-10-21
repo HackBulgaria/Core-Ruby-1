@@ -137,7 +137,7 @@ As a bigger challenge, try to strictly follow Enumerable. For example if no
 initial element is given to `#reduce` Ruby's Enumerable will take the first one
 of the collection as the initial value.
 
-This is what makes `(1..10).reduce { |sum, n| sum + n|` work. Consult with
+This is what makes `(1..10).reduce { |sum, n| sum + n }` work. Consult with
 [rubyspec][] to better mimic Ruby's Enumerable behaviour.
 
 [rubyspec]: https://github.com/rubyspec/rubyspec/tree/7fb7465aac1ec8e2beffdfa9053758fa39b443a5/core/enumerable

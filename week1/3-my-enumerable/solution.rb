@@ -50,7 +50,13 @@ module MyEnumerable
   end
 
   def count(element = nil)
-    # Your code goes here.
+    cnt = 0
+    if element
+      self.each { |e| cnt += 1 if element == e }
+    else
+      self.each { |e| cnt += 1 }
+    end
+    cnt
   end
 
   def size

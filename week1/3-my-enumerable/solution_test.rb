@@ -25,12 +25,14 @@ class SolutionTest < Minitest::Test
     collection = Collection.new(*1..10)
 
     assert_equal [1, 3, 5, 7, 9], collection.filter(&:odd?)
+    assert_equal [2, 4, 6, 8, 10], collection.filter(&:even?)
   end
 
   def test_reject
     collection = Collection.new(*1..10)
 
     assert_equal [1, 3, 5, 7, 9], collection.reject(&:even?)
+    assert_equal [2, 4, 6, 8, 10], collection.reject(&:odd?)
   end
 
   def test_reduce
@@ -66,5 +68,14 @@ class SolutionTest < Minitest::Test
     assert_equal 2, [[1, 2, 3], 2].size
     assert_equal 0, Hash.new.size
     assert_equal 2, ( {:a => 1, :b => 2}.size )
+  end
+
+  def test_count
+    collection = Collection.new(*1..10)
+
+    assert_equal 1, collection.count(5)
+    assert_equal 1, collection.count(9)
+    assert_equal 10, collection.count(nil)
+    assert_equal 4, [1,2,3,3,3,4,5,3,1,2].count(3)
   end
 end

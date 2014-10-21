@@ -61,6 +61,14 @@ module MyEnumerable
   def size
     # Your code goes here.
   end
+
+  # Groups the collection by result of the block.
+  # Returns a hash where the keys are the evaluated
+  # result from the block and the values are arrays
+  # of elements in the collection that correspond to
+  # the key.
+  def group_by
+  end
 end
 ```
 

@@ -35,15 +35,15 @@ class Vector2D
     # Your code goes here.
   end
 
-  def ==(vector)
+  def ==(other)
     # Your code goes here.
   end
 
-  def +(vector_or_scalar)
+  def +(other)
     # Your code goes here.
   end
 
-  def -(vector_or_scalar)
+  def -(other)
     # Your code goes here.
   end
 

@@ -155,7 +155,8 @@ end
 
 playlist.find_by awesome_rock_filter
 ```
-```YAML
+
+```yaml
  For the self.from_yaml(path) method check the Ruby YAML here:
  http://ruby-doc.org/stdlib-1.9.3/libdoc/yaml/rdoc/YAML.html
 

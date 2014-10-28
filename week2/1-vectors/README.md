@@ -35,7 +35,7 @@ class Vector2D
     # Your code goes here.
   end
 
-  def ==(vector_or_scalar)
+  def ==(vector)
     # Your code goes here.
   end
 

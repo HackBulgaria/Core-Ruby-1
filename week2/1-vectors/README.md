@@ -105,7 +105,7 @@ class Vector
     # Your code goes here.
   end
 
-  def []=(index)
+  def []=(index, value)
     # Your code goes here.
   end
 

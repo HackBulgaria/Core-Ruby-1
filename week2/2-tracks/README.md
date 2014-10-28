@@ -156,13 +156,13 @@ end
 playlist.find_by awesome_rock_filter
 ```
 
-```yaml
- For the self.from_yaml(path) method check the Ruby YAML here:
+For the self.from_yaml(path) method check the Ruby YAML here:
  http://ruby-doc.org/stdlib-1.9.3/libdoc/yaml/rdoc/YAML.html
 
- You need to create a .yml file with tracks and load them in 
- the playlist. Below there is an example of a yml file with two tracks:
+You need to create a .yml file with tracks and load them in 
+the playlist. Below there is an example of a yml file with two tracks:
 
+```yaml
   one:
     artist: "KAYTRANADA feat. Shay Lia"
     name:   "Leave me alone"
@@ -174,7 +174,6 @@ playlist.find_by awesome_rock_filter
     name:   "The numnber of the beast"
     album:  "The numnber of the beast"
     genre:  "heavy metal"
-
 ```
 
 [Hash#fetch]: http://ruby-doc.org/core-2.1.4/Hash.html#fetch

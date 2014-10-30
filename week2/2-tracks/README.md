@@ -3,7 +3,7 @@
 Music is awesome, everybody gets it. Let's model a small part of a music player
 functionality -- its ability to manage tracks.
 
-# Track
+## Track
 
 First, model the track class. It should store the fields
 `:artist, :name, :album, :genre`.
@@ -174,6 +174,34 @@ the playlist. Below there is an example of a yml file with two tracks:
  name:   "The numnber of the beast"
  album:  "The numnber of the beast"
  genre:  "heavy metal"
+```
+
+## HashWithIndifferentAccess
+
+Wait, but the YAML serializes the hash keys as strings?
+I cannot use my Track initializer ;(
+
+To overcome this, let's implement a special Hash. A
+hash in which `hash[:key]` and `hash["key"]` give us
+the same object.
+
+Then, let's monkey patch hash to be able to convert a
+regular hash to one with indifferent access.
+
+```ruby
+class HashWithIndifferentAccess < Hash
+  # Your code goes here.
+end
+
+class Hash
+  def with_indifferent_access
+    HashWithIndifferentAccess.new(self)
+  end
+end
+
+hash = {key1: 1, key2: 2}.with_indifferent_access
+hash[:key1] == hash["key1"]           #=> true
+hash.fetch(:key) == hash.fetch("key") #=> true
 ```
 
 [Hash#fetch]: http://ruby-doc.org/core-2.1.4/Hash.html#fetch

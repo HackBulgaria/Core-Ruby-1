@@ -163,17 +163,17 @@ You need to create a .yml file with tracks and load them in
 the playlist. Below there is an example of a yml file with two tracks:
 
 ```yaml
-  one:
-    artist: "KAYTRANADA feat. Shay Lia"
-    name:   "Leave me alone"
-    album:  "So Bad"
-    genre:  "Dance"
+-
+ artist: "KAYTRANADA feat. Shay Lia"
+ name:   "Leave me alone"
+ album:  "So Bad"
+ genre:  "Dance"
 
-  two:
-    artist: "Iron Maiden"
-    name:   "The numnber of the beast"
-    album:  "The numnber of the beast"
-    genre:  "heavy metal"
+-
+ artist: "Iron Maiden"
+ name:   "The numnber of the beast"
+ album:  "The numnber of the beast"
+ genre:  "heavy metal"
 ```
 
 [Hash#fetch]: http://ruby-doc.org/core-2.1.4/Hash.html#fetch

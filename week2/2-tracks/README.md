@@ -80,15 +80,15 @@ class Playlist
   end
 
   def find_by_artist(artist)
-    # Finds all the tracks by the artist
+    # Finds all the tracks by the artist. Should return a new Playlist.
   end
 
   def find_by_album(album)
-    # Finds all the tracks from the album.
+    # Finds all the tracks from the album. Should return a new Playlist.
   end
 
   def find_by_genre(genre)
-    # Finds all the tracks by genre.
+    # Finds all the tracks by genre. Should return a new Playlist.
   end
 
   def shuffle

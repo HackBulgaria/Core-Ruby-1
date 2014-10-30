@@ -101,7 +101,7 @@ class Playlist
 
   def to_s
     # It should return a nice tabular representation of all the tracks.
-    Checkout the String method for something that can help you with that.
+    # Checkout the String class for something that can help you with that.
   end
 
   def &(playlist)
@@ -134,7 +134,7 @@ jazz_playlist - house_playlist
 soul_playlist | house_playlist
 
 # I wanna be able to filter the tracks by a block.
-playlist.find_by { |track| ["Led Zeppellin", "The Doors"].include? track.artist }
+playlist.find { |track| ["Led Zeppellin", "The Doors"].include? track.artist }
 
 # I wanna be able by a filter object.
 class AwesomeRockFilter

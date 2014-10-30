@@ -76,7 +76,7 @@ class Playlist
   end
 
   def find_by_name(name)
-    # Filter the playlist by a block. Should return a new Playlist.
+    # Finds all the tracks by the name
   end
 
   def find_by_artist(artist)

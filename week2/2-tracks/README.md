@@ -201,7 +201,7 @@ end
 
 hash = {key1: 1, key2: 2}.with_indifferent_access
 hash[:key1] == hash["key1"]           #=> true
-hash.fetch(:key) == hash.fetch("key") #=> true
+hash.fetch(:key2) == hash.fetch("key2") #=> true
 ```
 
 [Hash#fetch]: http://ruby-doc.org/core-2.1.4/Hash.html#fetch

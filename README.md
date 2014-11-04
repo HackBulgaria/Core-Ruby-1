@@ -1,6 +1,6 @@
 # Core-Ruby-1
 
-The repository for the [Hack Bulgaria][] [Core Ruby][] class. October 2014. Visit the class [website][Core Ruby] at [http://coreruby.github.io][Core Ruby].
+The repository for the [Hack Bulgaria][] [Core Ruby][] class. October 2014. Visit the class [website][Core Ruby] at [http://ruby.hackbulgaria.com][Core Ruby].
 
 ## Program
 
@@ -19,4 +19,4 @@ Week | Material
  8   | RubyGems: The structure of a gem. Gem specifications. Rake. Bundler.
 
 [Hack Bulgaria]: http://hackbulgaria.com
-[Core Ruby]: http://coreruby.github.io
+[Core Ruby]: http://ruby.hackbulgaria.com

@@ -3,7 +3,7 @@
 Music is awesome, everybody gets it. Let's model a small part of a music player
 functionality -- its ability to manage tracks.
 
-# Track
+## Track
 
 First, model the track class. It should store the fields
 `:artist, :name, :album, :genre`.
@@ -52,7 +52,7 @@ including Enumerable, without polluting the class with a ton of methods.
 
 ```ruby
 class Playlist
-  def from_path(path)
+  def self.from_yaml(path)
     # Your code goes here.
   end
 
@@ -76,19 +76,19 @@ class Playlist
   end
 
   def find_by_name(name)
-    # Filter the playlist by a block. Should return a new Playlist.
+    # Finds all the tracks by the name. Should return a new Playlist.
   end
 
   def find_by_artist(artist)
-    # Finds all the tracks by the artist
+    # Finds all the tracks by the artist. Should return a new Playlist.
   end
 
   def find_by_album(album)
-    # Finds all the tracks from the album.
+    # Finds all the tracks from the album. Should return a new Playlist.
   end
 
   def find_by_genre(genre)
-    # Finds all the tracks by genre.
+    # Finds all the tracks by genre. Should return a new Playlist.
   end
 
   def shuffle
@@ -101,7 +101,7 @@ class Playlist
 
   def to_s
     # It should return a nice tabular representation of all the tracks.
-    Checkout the String method for something that can help you with that.
+    # Checkout the String class for something that can help you with that.
   end
 
   def &(playlist)
@@ -134,14 +134,18 @@ jazz_playlist - house_playlist
 soul_playlist | house_playlist
 
 # I wanna be able to filter the tracks by a block.
-playlist.find_by { |track| ["Led Zeppellin", "The Doors"].include? track.artist }
+playlist.find { |track| ["Led Zeppellin", "The Doors"].include? track.artist }
 
 # I wanna be able by a filter object.
 class AwesomeRockFilter
   AWESOME_ARTISTS = %w(Led\ Zeppellin The\ Doors Black\ Sabbath)
 
   def call(track)
+<<<<<<< HEAD
     AWESOME_ARTISTS.include? track.fetch(:artist)
+=======
+    AWESOME_ARTISTS.include? track.artist
+>>>>>>> 2616add00b40cf12c1980d11fbccb1c1604435eb
   end
 end
 
@@ -150,10 +154,58 @@ playlist.find_by AwesomeRockFilter.new
 # Because of the interface, I wanna be able to filter it out with a proc too.
 awesome_rock_filter = proc do |track|
   awesome_artists = %w(Led\ Zeppellin The\ Doors Black\ Sabbath)
-  awesome_artist.include? track.artist
+  awesome_artists.include? track.artist
 end
 
 playlist.find_by awesome_rock_filter
+```
+
+For the self.from_yaml(path) method check the Ruby YAML here:
+ http://ruby-doc.org/stdlib-1.9.3/libdoc/yaml/rdoc/YAML.html
+
+You need to create a .yml file with tracks and load them in 
+the playlist. Below there is an example of a yml file with two tracks:
+
+```yaml
+-
+ artist: "KAYTRANADA feat. Shay Lia"
+ name:   "Leave me alone"
+ album:  "So Bad"
+ genre:  "Dance"
+
+-
+ artist: "Iron Maiden"
+ name:   "The numnber of the beast"
+ album:  "The numnber of the beast"
+ genre:  "heavy metal"
+```
+
+## HashWithIndifferentAccess
+
+Wait, but the YAML serializes the hash keys as strings?
+I cannot use my Track initializer ;(
+
+To overcome this, let's implement a special Hash. A
+hash in which `hash[:key]` and `hash["key"]` give us
+the same object.
+
+Then, let's monkey patch hash to be able to convert a
+regular hash to one with indifferent access.
+
+```ruby
+class HashWithIndifferentAccess < Hash
+  # Your code goes here.
+end
+
+class Hash
+  def with_indifferent_access
+    HashWithIndifferentAccess.new(self)
+  end
+end
+
+hash = {key1: 1, key2: 2}.with_indifferent_access
+hash[:key1] == hash["key1"]           #=> true
+hash.fetch(:key2) == hash.fetch("key2") #=> true
 ```
 
 [Hash#fetch]: http://ruby-doc.org/core-2.1.4/Hash.html#fetch

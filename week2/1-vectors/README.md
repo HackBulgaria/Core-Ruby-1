@@ -105,7 +105,11 @@ class Vector
     # Your code goes here.
   end
 
+<<<<<<< HEAD
+  def []=(index, number)
+=======
   def []=(index, value)
+>>>>>>> 2616add00b40cf12c1980d11fbccb1c1604435eb
     # Your code goes here.
   end
 

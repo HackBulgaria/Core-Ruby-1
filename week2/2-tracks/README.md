@@ -141,7 +141,11 @@ class AwesomeRockFilter
   AWESOME_ARTISTS = %w(Led\ Zeppellin The\ Doors Black\ Sabbath)
 
   def call(track)
+<<<<<<< HEAD
+    AWESOME_ARTISTS.include? track.fetch(:artist)
+=======
     AWESOME_ARTISTS.include? track.artist
+>>>>>>> 2616add00b40cf12c1980d11fbccb1c1604435eb
   end
 end
 

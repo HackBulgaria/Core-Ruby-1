@@ -30,6 +30,21 @@ their data through accessors only. Let them do that.
 Of course, you should implement `private_attr_reader` and
 `private_attr_writter`. The `protected_*` family as well.
 
+## Module#cattr_accessor
+
+Define an accessor exposing API for class variables. This includes
+`Module#cattr_reader` and `Module#cattr_writter`.
+
+As a bonus, let us specify default values, like this:
+
+```ruby
+class TestCase
+  cattr_accessor(:tests) { [] }
+end
+
+TestCase.tests #=> []
+```
+
 ## Proxy
 
 Create a Proxy class, that delegates every method call to its target object.

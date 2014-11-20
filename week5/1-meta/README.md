@@ -19,6 +19,7 @@ Let's make this working:
 
 ```ruby
 [2, 3, 4, 5].map('succ.succ') #=> [4, 5, 6, 7]
+```
 
 ## Module#private_attr_accessor
 

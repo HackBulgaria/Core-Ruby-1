@@ -49,3 +49,10 @@ Bonus:
 
 Make sure it respects `#method_missing` and `#respond_to_missing?` to the
 target class.
+
+## FMI
+
+2008 was a great year for Ruby! Check out the [metaprogramming problems], our
+friends over FMI gave for that year.
+
+[metaprogramming problems]: http://2008.fmi.ruby.bg/tasks/2.html

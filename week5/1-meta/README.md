@@ -28,3 +28,24 @@ their data through accessors only. Let them do that.
 
 Of course, you should implement `private_attr_reader` and
 `private_attr_writter`. The `protected_*` family as well.
+
+## Proxy
+
+Create a Proxy class, that delegates every method call to its target object.
+
+```ruby
+proxy = Proxy.new [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+proxy.size  #=> 10
+proxy.sizes #=> NoMethodError
+proxy[0]    #=> 1
+proxy & [2] #=>2
+
+proxy.respond_to? :size #=> true
+proxy.respond_to? :zzzz #=> false
+```
+
+Bonus:
+
+Make sure it respects `#method_missing` and `#respond_to_missing?` to the
+target class.

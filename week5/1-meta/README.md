@@ -40,7 +40,7 @@ proxy = Proxy.new [1, 2, 3, 4, 5, 6, 7, 8, 9]
 proxy.size  #=> 10
 proxy.sizes #=> NoMethodError
 proxy[0]    #=> 1
-proxy & [2] #=>2
+proxy & [2] #=> 2
 
 proxy.respond_to? :size #=> true
 proxy.respond_to? :zzzz #=> false

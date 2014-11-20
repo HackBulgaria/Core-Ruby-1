@@ -66,6 +66,30 @@ Bonus:
 Make sure it respects `#method_missing` and `#respond_to_missing?` to the
 target class.
 
+## Object#delegate
+
+Delegating a method to existing object is a commonly used task in Rubyland.
+Let's make it easier by defining a helper.
+
+```ruby
+User = Struct.new(:first_name, :last_name)
+
+class Invoce
+  delegate :fist_name, to: '@user'
+  delegate :last_name, to: '@user'
+
+  def initialize(user)
+    @user = user
+  end
+end
+
+user = User.new 'Genadi', 'Samokovarov'
+invoice = Invoce.new(user)
+
+invoice.fist_name #=> "Genadi"
+invoice.last_name #=> "Samokovarov"
+```
+
 ## FMI
 
 2008 was a great year for Ruby! Check out the [metaprogramming problems], our

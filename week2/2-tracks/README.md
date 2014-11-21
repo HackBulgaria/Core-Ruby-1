@@ -131,12 +131,12 @@ jazz_playlist & house_playlist
 jazz_playlist - house_playlist
 
 # I wanna combine my soul and funk tracks.
-soul_playlist | house_playlist
+soul_playlist | funk_playlist
 
 # I wanna be able to filter the tracks by a block.
 playlist.find { |track| ["Led Zeppellin", "The Doors"].include? track.artist }
 
-# I wanna be able by a filter object.
+# I wanna be able to filter the playlist by a filter object.
 class AwesomeRockFilter
   AWESOME_ARTISTS = %w(Led\ Zeppellin The\ Doors Black\ Sabbath)
 

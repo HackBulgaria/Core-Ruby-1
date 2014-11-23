@@ -7,6 +7,10 @@ To exercise our meta programming let's do some problems!
 In older versions of Ruby, there wasn't `Object#singleton_class`. Let's
 implement our own!
 
+## Object#define_singleton_method
+
+While at it, define `Object#define_singleton_method` as well.
+
 ## String#to_proc
 
 Symbol#to_proc wasn't around in older Rubies. It came out of Active Support,

@@ -49,6 +49,17 @@ end
 TestCase.tests #=> []
 ```
 
+## Blackhole Object
+
+Nils are annoying, right? They get into your way, they crash the program. Such
+a bummer!
+
+Instead of fixing our program, let's hide our nils by monkey patching `nil` in
+such a way, that we no longer get a `NoMethodError` when we access a method
+that doesn't exist.
+
+Hint: You have to patch `NilClass`.
+
 ## Proxy
 
 Create a Proxy class, that delegates every method call to its target object.
